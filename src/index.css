@@ -90,7 +90,8 @@ body{
   padding: 0.5rem 1rem;
   text-decoration: none;
   color: white;
-  background-color: #5455FF;
+  background: linear-gradient(to right, rgba(56, 88, 255, 1), rgba(183, 69, 255, 1), rgba(217, 64, 255, 1));
+
   border-radius: 50px;
 }
 

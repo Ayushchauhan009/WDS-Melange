@@ -150,17 +150,17 @@ const Form = () => {
             value={selectedCategories}
             onChange={handleCategoryChange}
             placeholder="Select"
-            className="mb-2"
+            className="mt-2 mb-4"
           />
           <Select
             options={options2}
             value={budget}
             onChange={handleBudgetChange}
             placeholder="Select"
-            className=""
+            className="mb-1"
           />
           <button
-            className="submit-bg text-white w-full py-2 font-bold mt-3 rounded-full mb-6"
+            className="submitBtn text-white w-full py-2 font-bold mt-3 rounded-full mb-6"
             type="submit"
           >
             Submit
