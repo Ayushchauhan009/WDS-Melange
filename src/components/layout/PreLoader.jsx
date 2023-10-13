@@ -14,7 +14,7 @@ const PreLoader = () => {
 
   return (
     <div className={`preloader ${isLoading ? "loading" : ""}`}>
-      <div className="logo mb-3">Welcome to Melange Digital</div>
+      <div className="logo  mb-3">Welcome to Melange Digital</div>
       <div className="loading-animation">
         <div className={`spinner ${isLoading ? "rotating" : ""}`}></div>
         <div className={`line ${isLoading ? "stretching" : ""}`}></div>

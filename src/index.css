@@ -421,6 +421,14 @@ option{
   color: #fff;
   animation: fadeIn 1s ease-in-out;
 }
+@media (max-width: 768px) {
+  
+.logo {
+  font-size: 1.3rem;
+  color: #fff;
+  animation: fadeIn 1s ease-in-out;
+}
+}
 
 .loading-animation {
   display: flex;
