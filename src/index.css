@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html{
+  cursor: none;
+  scroll-behavior: smooth;
+}
+
+
+body{
+  background-color: #f8f8f8;
+}
+
+.headerBg{
+  background-image: url("../src/assets/images/backgroundimage.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.submitBtn{
+  background: linear-gradient(to right, rgba(56, 88, 255, 1), rgba(183, 69, 255, 1), rgba(217, 64, 255, 1));
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.submitBtn:hover{
+  background: black;
+  color: white;
+  
+  
+  transform: scale(1.2);
+}
+
+
+.textBg{
+  background: rgba(217, 64, 255, 0.4);
+}
+
+
+.customCursor {
+  cursor: url('./assets/images/cursor.png'), auto;
+}
+
+
+@media (max-width: 768px){
+  .headerBg{
+    background-image: url("./assets/images/backgroundimageMob.svg");
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    background-position: top;
+    
+    
+  }
+}
+
+
+.navbar-link {
+  display: inline-block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-link:hover {
+  position: relative;
+  background: linear-gradient(268.81deg, #3858FF 28.07%, #B745FF 74.52%, #D940FF 101.17%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.navbar-link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0; 
+  transform: translateX(80%);
+  width: 40%;
+  height: 2px;
+
+  background: linear-gradient(268.81deg, #3858FF 28.07%, #B745FF 74.52%, #D940FF 101.17%);
+}
+.navbar-contact {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: white;
+  background-color: #5455FF;
+  border-radius: 50px;
+}
+
+.active-link.active {
+
+  background: linear-gradient(268.81deg, #3858FF 28.07%, #B745FF 74.52%, #D940FF 101.17%);
+  
+  text-decoration: underline;
+}
+
+.navbar-contact:hover {
+  position: relative;
+  background: linear-gradient(268.81deg, #3858FF 28.07%, #B745FF 74.52%, #D940FF 101.17%);
+  transition: linear 0.3s ease-in;
+}
+
+.navbar-contact:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0; 
+  transform: translateX(80%);
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(268.81deg, #3858FF 28.07%, #B745FF 74.52%, #D940FF 101.17%);
+}
+
+
+.submit-bg{
+  background-color: #101940;
+  animation: slideIn 1.3s ease-in-out;
+}
+
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.close-bg {
+  background-color: #101940;
+  animation: slideOut 1.3s ease-in-out;
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.quick-links div a:hover{
+  background: linear-gradient(270deg, #5455FF 5.85%, #C76BFC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+
+.multiverse-text{
+  background: linear-gradient(268.81deg, #3858FF 28.07%, #B745FF 74.52%, #D940FF 101.17%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+}
+
+.navbar-bg{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.jbg{
+ background: rgba(239, 212, 255, 0.5);
+}
+
+.test-button:active{
+  color: #000;
+}
+
+.test-bg{
+  background-color: rgba(239, 212, 255, 0.5);
+}
+
+option{
+  background-color: white;
+}
+
+
+.back-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 52%;
+  cursor: pointer;
+  z-index: 9999;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-top-btn img{
+  width: 35px;
+  height: 32px;
+}
+
+.back-to-top-btn:hover {
+  background-color: #333;
+  
+}
+
+
+
+.contactBg{
+  background-image: url("./assets/images/contactBg.png");
+  background-size: cover;
+}
+
+
+@media (max-width: 768px){
+  .contactBg{
+    background-image: url("./assets/images/contactImgMob.png");
+    background-size: cover;
+    padding-bottom: 25rem;
+   
+    
+    
+  }
+}
+
+
+.centered-h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Center vertically in viewport */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9); /* Background with some opacity */
+  transition: transform 0.5s; /* Smooth transition effect */
+  z-index: 999; /* Ensure it's on top of other content */
+}
+
+
+
+.work-with {
+  background-image: url('./assets/images/ShowBg.png');
+  background-size: 110%;
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width:768px) {
+  .work-with {
+    background-image: url('./assets/images/ShowBg-mobile.png');
+    background-size: 114%;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.hover-scale {
+  transition: transform 0.5s ease-in-out;
+}
+
+.hover-scale:hover {
+  transform: scale(0.94);
+  /* Adjust the scale value as needed */
+
+
+}
+
+.hover-show {
+  display: none;
+}
+
+/* In your CSS or SCSS file */
+
+
+.ind-scroll {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* For smoother scrolling on iOS devices */
+  padding-top: 10px;
+}
+
+/* Optional: Adjust the width of each image */
+.ind-scroll img {
+  width: 100%;
+  /* Adjust the width as needed */
+
+}
+
+/* Style the horizontal scrollbar */
+.ind-scroll::-webkit-scrollbar {
+  width: 10px;
+  /* Adjust the scrollbar width as needed */
+  height: 8px;
+  background: transparent;
+
+  /* Background color of the scrollbar track */
+}
+
+.ind-scroll::-webkit-scrollbar-thumb:vertical {
+  margin-right: 10px;
+
+  /* Background color of the scrollbar track */
+}
+
+.ind-scroll::-webkit-scrollbar-thumb {
+  background: #fff;
+  /* Color of the scrollbar thumb */
+  border-radius: 12px;
+  /* Adjust the border radius as needed */
+
+}
+
+.ind-scroll::-webkit-scrollbar-thumb:hover {
+  background: #5bbdff;
+  /* Color of the scrollbar thumb on hover */
+}
+
+/* Optional: Hide the horizontal scrollbar track if desired */
+.ind-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Ensure the parent container takes up the full width of the viewport */
+/* This prevents default vertical scrolling when the content overflows horizontally */
+.ind-scroll-wrapper {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width:768px) {
+  .ind-scroll {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .cursor-circle {
+      display: none;
+  }
+}
+
+
+.relative2 {
+  position: relative;
+   height: auto; /* Set initial height */
+  overflow: hidden; /* Hide overflow */
+}
+
+
+.relative2 > .absolute {
+  display: none;
+  transition: all0.5s ease-in-out;
+}
+
+/* Show the first <p> tag when the parent <div> is hovered over */
+.relative2:hover > .absolute {
+  display: block;
+  transition: 0.5s ease;
+}
+
+
+.relative2:hover > .text-blue-600,
+.relative2:hover > .text-zinc-900 {
+  display: none;
+  position: absolute;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.text-center2 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.preloader.loading {
+  opacity: 1;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #fff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.loading-animation {
+  display: flex;
+  align-items: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #fff;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: complete border-top linear infinite;
+  animation: rotate 2s linear infinite, shrink 4s linear 1s backwards;
+}
+
+
+
+@keyframes complete {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.rotating {
+  animation: rotate 2s linear infinite;
+}
+
+.line {
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+  animation: stretch 1s linear 2s forwards;
+}
+
+.stretching {
+  animation: stretch 1s linear 2s forwards;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 40px;
+    height: 40px;
+  }
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes stretch {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 440px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
