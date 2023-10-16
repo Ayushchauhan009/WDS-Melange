@@ -67,11 +67,17 @@ const OurWork = () => {
   ];
   return (
     <div
-      className="lg:px-24 lg:py-20 py-10 bg-work -z-20 px-5 relative"
+      className="lg:px-24 lg:py-20 py-10 bg-black -z-20 px-5 "
       ref={containerRef}
     >
       {isInViewport && (
-        <p className="text-white font-extrabold font-nunito text-[300px] -z-10 fixed bottom-10 right-60">
+        <p
+          className="text-white font-extrabold font-nunito opacity-60 text-[300px] -z-10 fixed bottom-10 right-20"
+          style={{
+            transform: "rotateZ(0deg) rotateX(-10deg) rotateY(-60deg)",
+            transformOrigin: "center center",
+          }}
+        >
           Work
         </p>
       )}
@@ -87,7 +93,7 @@ const OurWork = () => {
       <div className="grid lg:grid-cols-2 w-full  grid-cols-1 gap-[50px]">
         {ourWork.map((data, index) => (
           <div key={index} className="hover-scale relative2">
-            <p className="absolute z-50 hidden left-0 top-[0%] pt-56 right-0 bottom-[75px] text-[42px] font-bold bg-black  text-center2  text-white bg-opacity-80">
+            <p className="absolute z-50 hidden left-0 top-[0%] pt-32 lg:pt-56 right-0 bottom-[26px] lg:bottom-[75px] text-[42px] font-bold bg-black  text-center2  text-white bg-opacity-80">
               {data.title}
             </p>
             <img src={data.icon} alt="" className="w-full" />

@@ -70,7 +70,7 @@ const Header = () => {
   return (
     <div
       ref={headerRef}
-      className="h-[500px]  lg:h-auto px-2 pb-[27.9rem] lg:pb-[42rem] xxll:pb-[52rem] flex flex-col pt-40 items-center headerBg"
+      className="h-[500px]  lg:h-auto px-2 pb-[27.9rem] lg:pb-[42rem] xxll:pb-[52rem] 2xl:pb-[45rem] flex flex-col pt-40 items-center headerBg"
     >
       <h1
         ref={headingRef}
