@@ -1,11 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { useInView } from "react-intersection-observer";
 import { wd, con, ui, seO4 } from "../../assets/images";
 
 const Section1 = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Trigger the animation only once
+  });
+
+  const helpRef = useRef(null);
+
+  useEffect(() => {
+    if (inView) {
+      gsap.fromTo(
+        helpRef.current,
+        {
+          opacity: 0,
+          x: 200,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          ease: "power2.out",
+          delay: 1.5,
+        }
+      );
+    }
+  }, [inView]);
+
   return (
     <div
+      ref={ref}
       className={`font-nunito flex flex-col lg:flex-row px-6 lg:px-28 py-10 items-center lg:space-x-10`}
-      // Animate position based on scroll
     >
       <div className="font-semibold">
         <h2 className="text-[28px] text-center lg:text-left mb-4 lg:mb-0 lg:text-[38px]">

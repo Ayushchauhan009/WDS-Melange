@@ -15,6 +15,24 @@ body{
   background-color: #f8f8f8;
 }
 
+
+.bg-work{
+  background: linear-gradient(to right, #000000, transparent), radial-gradient(circle at 100% 50%, #0f1020, transparent);
+  background-size: 100% 100%;
+  background-blend-mode: screen;
+}
+
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+
 .headerBg{
   background-image: url("../src/assets/images/backgroundimage.svg");
   background-size: cover;

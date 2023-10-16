@@ -149,15 +149,15 @@ const Form = () => {
             isMulti
             value={selectedCategories}
             onChange={handleCategoryChange}
-            placeholder="Select"
-            className="mt-2 mb-4"
+            placeholder="Type of website*"
+            className="mt-2 mb-4 placeholder-black"
           />
           <Select
             options={options2}
             value={budget}
             onChange={handleBudgetChange}
-            placeholder="Select"
-            className="mb-1"
+            placeholder="Budget*"
+            className="mb-1 placeholder-black"
           />
           <button
             className="submitBtn text-white w-full py-2 font-bold mt-3 rounded-full mb-6"
