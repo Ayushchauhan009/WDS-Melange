@@ -107,10 +107,33 @@ const OurWork = () => {
       const section = document.getElementById("our-work-section");
       if (section) {
         const sectionTop = section.getBoundingClientRect().top;
-        setIsInViewport(
-          sectionTop < window.innerHeight - 600 &&
-            sectionTop > window.innerHeight - 2350
-        );
+        const viewportHeight = window.innerHeight;
+
+        // Adjust the thresholds for mobile and laptop screens
+        let mobileViewportStart,
+          mobileViewportEnd,
+          laptopViewportStart,
+          laptopViewportEnd;
+
+        // Define the viewport conditions for mobile screens
+        if (window.innerWidth <= 768) {
+          mobileViewportStart = viewportHeight - 750; // Adjust as needed
+          mobileViewportEnd = viewportHeight - 3000; // Adjust as needed
+        } else {
+          // Define the viewport conditions for laptop screens
+          laptopViewportStart = viewportHeight - 600; // Adjust as needed
+          laptopViewportEnd = viewportHeight - 2350; // Adjust as needed
+        }
+
+        if (window.innerWidth <= 768) {
+          setIsInViewport(
+            sectionTop < mobileViewportStart && sectionTop > mobileViewportEnd
+          );
+        } else {
+          setIsInViewport(
+            sectionTop < laptopViewportStart && sectionTop > laptopViewportEnd
+          );
+        }
       }
     };
 
@@ -165,7 +188,7 @@ const OurWork = () => {
     <div className="relative bg-black">
       {isInViewport && (
         <div
-          className="fixed bottom-10 work-text-slide text-[400px] h-screen right-40 text-white font-extrabold font-nunito opacity-60"
+          className="fixed bottom-[-200px] lg:bottom-10 work-text-slide text-[130px] lg:text-[400px] h-screen right-7 lg:right-40 text-white font-extrabold font-nunito opacity-60"
           style={{
             transform: "rotateZ(0deg) rotateX(0deg) rotateY(0deg)",
             transformOrigin: "center center",
@@ -177,7 +200,7 @@ const OurWork = () => {
       )}
 
       <div id="our-work-section" className="lg:px-24 lg:py-20 py-10  px-5">
-        <p className="text-white lg:text-5xl text-[28px] text-center h-auto mb-[20px] font-semibold font-nunito leading-[48px]">
+        <p className="text-white lg:text-5xl text-[28px] text-center h-auto lg:mb-[20px] font-semibold font-nunito leading-[48px]">
           Our{" "}
           <span className="bg-[#D940FF] px-2 py-1 bg-opacity-40 rounded-[10px] text-white whitespace-nowrap">
             Work
@@ -185,7 +208,7 @@ const OurWork = () => {
         </p>
         {/* Your section content goes here */}
       </div>
-      <div className="grid lg:grid-cols-2 w-full px-28 pb-20  grid-cols-1 gap-[50px]">
+      <div className="grid lg:grid-cols-2 w-full px-5 lg:px-28 pb-20  grid-cols-1 gap-[50px]">
         {ourWork.map((data, index) => (
           <div key={index} className="hover-scale  relative2">
             <p className="absolute z-50 hidden left-0 top-[0%] pt-32 lg:pt-56 right-0 bottom-[26px] lg:bottom-[75px] text-[42px] font-bold bg-black  text-center2  text-white bg-opacity-80">
