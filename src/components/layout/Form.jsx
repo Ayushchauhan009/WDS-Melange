@@ -51,7 +51,6 @@ const Form = () => {
         name,
         email,
         phone,
-
         categories: selectedCategories.map((category) => category.label),
         budget,
       };
@@ -78,7 +77,7 @@ const Form = () => {
             from_company: formData.company,
             from_categories: formData.categories,
             to_email: "hello@melangedigital.in",
-            message: formData.message,
+            from_budget: formData.budget,
           },
           "11W3shu7B6S46t437"
         )

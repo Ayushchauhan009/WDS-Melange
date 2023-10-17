@@ -375,9 +375,20 @@ option{
   }
 }
 
+.work-text-slide {
+  transform: translateX(-100%); /* Initial position outside the viewport */
+  transition: transform 0.5s ease-in-out; /* Smooth animation */
+}
+
+.work-text-slide.slide-in {
+  transform: translateX(0); /* Slide in from the left */
+}
+
+
 
 .relative2 {
   position: relative;
+  
    height: auto; /* Set initial height */
   overflow: hidden; /* Hide overflow */
 }
@@ -385,7 +396,7 @@ option{
 
 .relative2 > .absolute {
   display: none;
-  transition: all0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 /* Show the first <p> tag when the parent <div> is hovered over */
