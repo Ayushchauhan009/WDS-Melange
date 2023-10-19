@@ -12,3 +12,4 @@ export { default as PreLoader } from "./PreLoader";
 export { default as OurWork } from "./OurWork";
 export { default as AnimatedCursor } from "./AnimatedCursor";
 export { default as Timeline } from "./Timeline";
+export { default as BackToTop } from "./BackToTop";

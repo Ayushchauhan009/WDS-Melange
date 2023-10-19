@@ -13,6 +13,7 @@ import {
   Industries,
   OurWork,
   AnimatedCursor,
+  BackToTop,
   PreLoader,
 } from "../layout";
 const Home = () => {
@@ -39,6 +40,7 @@ const Home = () => {
           <ChooseUS />
           <WorkWith />
           <Industries />
+          <BackToTop />
           <Testimonials />
           <div id="contactus">
             <Contact />

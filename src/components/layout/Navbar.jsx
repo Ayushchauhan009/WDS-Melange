@@ -1,6 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { mainLogo } from "../../assets/images";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
+
+const scrollToContactUs = () => {
+  const contactUsSection = document.getElementById("contactus");
+  if (contactUsSection) {
+    contactUsSection.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -22,7 +29,6 @@ const Navbar = () => {
     };
   }, []);
 
-  // Close the menu when a link is clicked
   const closeMenu = () => {
     setMenuOpen(false);
   };
@@ -75,8 +81,10 @@ const Navbar = () => {
           }`}
         >
           <div className="navbar-contact shadow-lg rounded-2xl cursor-pointer bg-[#1A1A1A] font-medium text-[17px] text-[#fff] hidden sm:block">
-            <div activeClassName="" exact className="">
-              <a href="#contactus">Contact Us</a>
+            <div>
+              <button type="submit" onClick={scrollToContactUs}>
+                Contact Us
+              </button>
             </div>
           </div>
         </div>
@@ -91,7 +99,9 @@ const Navbar = () => {
                 className="nav-link text-[25px] "
                 onClick={closeMenu}
               >
-                <a href="#contactus">Contact Us</a>
+                <button type="submit" onClick={scrollToContactUs}>
+                  Contact Us
+                </button>
               </div>
             </div>
           </div>

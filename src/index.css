@@ -650,3 +650,24 @@ option{
   border-radius: 5px;
 }
 
+
+/* Define the style for the "Back to Top" button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF; /* Background color */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 50%;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+}
+
+/* Style the button on hover */
+.back-to-top:hover {
+  background-color: #0056b3; /* Hover background color */
+  transform: scale(1.1); /* Add a scale effect on hover */
+}

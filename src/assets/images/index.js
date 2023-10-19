@@ -69,8 +69,10 @@ import duvon from "./duvon.jpg";
 import dhruvak from "./dhruvak.jpg";
 import costacruises from "./costacruises.jpg";
 import proportunity from "./proportunity.jpg";
+import uparrow from "./up-arrow.png";
 
 export {
+  uparrow,
   kalon,
   duvon,
   dhruvak,

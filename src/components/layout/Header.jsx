@@ -1,71 +1,86 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef, useLayoutEffect, useState } from "react";
 import gsap from "gsap";
 
 const Header = () => {
   const headingRef = useRef(null);
   const headerRef = useRef(null);
   const buttonRef = useRef(null);
+  const [animationPlayed, setAnimationPlayed] = useState(false);
+
+  const scrollToContactUs = () => {
+    const contactUsSection = document.getElementById("contactus");
+    if (contactUsSection) {
+      contactUsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   useLayoutEffect(() => {
-    const animation = gsap.fromTo(
-      headerRef.current,
-      {
-        scale: 0.5,
-      },
-      {
-        scale: 1,
-        duration: 2,
-      }
-    );
+    if (!animationPlayed) {
+      const animation = gsap.fromTo(
+        headerRef.current,
+        {
+          scale: 0.5,
+        },
+        {
+          scale: 1,
+          duration: 2,
+        }
+      );
 
-    animation.play(); // Start the animation
+      animation.play(); // Start the animation
 
-    // Cleanup the animation when the component unmounts
-    return () => animation.kill();
-  }, []);
+      // Cleanup the animation when the component unmounts
+      return () => animation.kill();
+    }
+  }, [animationPlayed]);
 
   useLayoutEffect(() => {
-    const animation = gsap.fromTo(
-      headingRef.current,
-      {
-        opacity: 0,
-        y: 100,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power2.out",
-        delay: 1.5,
-      }
-    );
+    if (!animationPlayed) {
+      const animation = gsap.fromTo(
+        headingRef.current,
+        {
+          opacity: 0,
+          y: 100,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power2.out",
+          delay: 1.5,
+        }
+      );
 
-    animation.play(); // Start the animation
+      animation.play(); // Start the animation
 
-    // Cleanup the animation when the component unmounts
-    return () => animation.kill();
-  }, []);
+      // Cleanup the animation when the component unmounts
+      return () => animation.kill();
+    }
+  }, [animationPlayed]);
+
   useLayoutEffect(() => {
-    const animation = gsap.fromTo(
-      buttonRef.current,
-      {
-        opacity: 0,
-        y: 100,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power2.out",
-        delay: 2.5,
-      }
-    );
+    if (!animationPlayed) {
+      const animation = gsap.fromTo(
+        buttonRef.current,
+        {
+          opacity: 0,
+          y: 100,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power2.out",
+          delay: 2.5,
+        }
+      );
 
-    animation.play(); // Start the animation
+      animation.play(); // Start the animation
 
-    // Cleanup the animation when the component unmounts
-    return () => animation.kill();
-  }, []);
+      // Cleanup the animation when the component unmounts
+      return () => animation.kill();
+    }
+  }, [animationPlayed]);
 
   return (
     <div
@@ -80,10 +95,15 @@ const Header = () => {
         Transform Your Online Presence
       </h1>
       <button
+        type="submit"
         ref={buttonRef}
+        onClick={() => {
+          scrollToContactUs();
+          setAnimationPlayed(true);
+        }}
         className="submitBtn mt-5 font-nunito text-[18px] rounded-full px-4 py-2"
       >
-        <a href="#contactus">Get Started</a>
+        Get Started
       </button>
     </div>
   );
