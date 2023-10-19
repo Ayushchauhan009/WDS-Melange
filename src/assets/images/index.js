@@ -71,7 +71,7 @@ import costacruises from "./costacruises.jpg";
 import proportunity from "./proportunity.jpg";
 import uparrow from "./up-arrow.png";
 import costaLogo from "./costaLogo.png";
-import kunalRathod from "./kunalrathodLogo.png";
+import kunalRathod from "./kunalrathodLogosvg.svg";
 
 export {
   costaLogo,

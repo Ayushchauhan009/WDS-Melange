@@ -109,11 +109,17 @@ const Testimonials = () => {
                 <img src={review.comma} alt="" className="w-10 -mt-6 h-8" />
               </div>
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                <div className="flex flex-col sm:flex-row items-start mx-4 md:mx-0">
+                <div
+                  className={`flex flex-col sm:flex-row items-start mx-4 md:mx-0 ${
+                    reviews.id === 3 ? reviews.icon === "w-10 h-20" : ""
+                  } `}
+                >
                   <img
                     src={review.icon}
                     alt=""
-                    className="w-auto h-16 -ml-3 object-cover md:ml-0 "
+                    className={`w-auto h-16 -ml-3  md:ml-0 
+                      
+                    `}
                   />
                   <div className="flex flex-col items-start -ml-3 font-nunito sm:ml-6 mt-0 sm:mt-1 md:items-start">
                     <h3 className="font-bold">{review.name}</h3>
