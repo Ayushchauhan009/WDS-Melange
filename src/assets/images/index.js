@@ -70,8 +70,12 @@ import dhruvak from "./dhruvak.jpg";
 import costacruises from "./costacruises.jpg";
 import proportunity from "./proportunity.jpg";
 import uparrow from "./up-arrow.png";
+import costaLogo from "./costaLogo.png";
+import kunalRathod from "./kunalrathodLogo.png";
 
 export {
+  costaLogo,
+  kunalRathod,
   uparrow,
   kalon,
   duvon,

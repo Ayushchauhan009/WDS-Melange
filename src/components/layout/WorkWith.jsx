@@ -12,7 +12,7 @@ const WorkWith = () => {
     <div className="work-with lg:px-20 lg:py-20 px-5 py-10 relative ">
       <div className="flex flex-col lg:flex-row justify-center items-center">
         <div className="lg:w-[40%]">
-          <div class=" text-zinc-900 text-center lg:text-left lg:text-5xl text-[28px] font-semibold font-nunito lg:leading-[57.60px] leading-[33.60px]">
+          <div class=" text-zinc-900 text-center lg:text-left lg:text-5xl text-[28px] font-semibold font-nunito lg:leading-[57.60px] mb-2 leading-[33.60px]">
             Who we work with
           </div>
           <div class="w text-zinc-900 text-lg text-center lg:text-left font-normal font-nunito leading-normal">

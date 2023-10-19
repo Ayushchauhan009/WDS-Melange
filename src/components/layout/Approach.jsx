@@ -69,7 +69,7 @@ const Approach = () => {
             className="w-full lg:h-72 px-[30px] py-[25px] flex flex-col justify-center items-start bg-white rounded-[10px] shadow border-b-2 border-blue-600 cursor-pointer hover:border-green-500"
           >
             <img src={data.icon} alt="" className="mx-auto" />
-            <div className="mt-[17px] text-center mx-auto text-zinc-900 text-xl font-bold font-nunito leading-normal">
+            <div className="mt-[17px] whitespace-nowrap text-center mx-auto text-zinc-900 text-xl font-bold font-nunito leading-normal">
               {data.title}
             </div>
             <div className="mt-3 px-2 text-center text-zinc-900 text-base font-normal font-nunito leading-tight">

@@ -5,6 +5,8 @@ import {
   comma,
   holiday,
   duvonlogo2,
+  kunalRathod,
+  costaLogo,
 } from "../../assets/images";
 
 import { useMediaQuery } from "react-responsive";
@@ -17,36 +19,36 @@ const Testimonials = () => {
       id: 1,
       icon: duvonlogo2,
       name: "Khushboo Shah",
-      title: "Business Head- Duvon Disney",
+      title: "Duvon",
       review:
-        "They helped us with a holistic marketing plan which included E-commerce, social media, online campaigns and much more to launch our brand in the digital space ad increase sales exponentially.",
+        "Melange Digital Agency's website development transformed our online presence. They turned our outdated site into a modern, user-friendly platform that perfectly fits our business. Their expertise and dedication are truly commendable.",
       comma: comma,
     },
     {
       id: 2,
       icon: kalonlogo,
       name: "Vidya Pandit",
-      title: "Co-founder- Kalon Organics",
+      title: "Kalon Organics",
       review:
-        "Mélange Digital is like your in-house marketing team who is always ready to support and come up with strategies based on the latest trends and technology.",
+        "Melange Digital Agency's website development elevated our startup's online presence. They created a stunning, functional site that truly represents our brand. Their attention to detail and creativity made a huge difference.",
       comma: comma,
     },
     {
       id: 3,
-      icon: dhruvaklogo2,
-      name: "Jitendra Joshi",
-      title: "Founder & CEO- Dhruvak",
+      icon: costaLogo,
+      name: "Nalini Gupta",
+      title: "Costa Cruise",
       review:
-        "Mélange helped us with in-depth market research and holistic strategies to launch a new niche of online value education in the overcrowded space of Ed Tech",
+        "Melange Digital has been a game-changer for our marketing. Their SEO strategies improved our online visibility and engagement. They are a highly skilled, responsive team committed to delivering results.",
       comma: comma,
     },
     {
       id: 4,
-      icon: holiday,
-      name: "Snehal Kolambe",
-      title: "Co-founder- The Holiday Store",
+      icon: kunalRathod,
+      name: "Kunal Rathod",
+      title: "Kunal Rathod",
       review:
-        "They are the masters when it comes to detailed targeting and campaign strategies. Mélange has helped us bring high quality leads on a continuous basis and build a strong social media presence.",
+        "Their SEO and website development services worked wonders for my online consultations. They pushed my site to the top of search results, significantly increasing my traffic and sales. I highly recommend their exceptional services.",
       comma: comma,
     },
   ]);
@@ -111,7 +113,7 @@ const Testimonials = () => {
                   <img
                     src={review.icon}
                     alt=""
-                    className="w-auto h-16 -ml-3 md:ml-0 "
+                    className="w-auto h-16 -ml-3 object-cover md:ml-0 "
                   />
                   <div className="flex flex-col items-start -ml-3 font-nunito sm:ml-6 mt-0 sm:mt-1 md:items-start">
                     <h3 className="font-bold">{review.name}</h3>

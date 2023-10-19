@@ -169,7 +169,7 @@ const OurWork = () => {
           {ourWork.map((data, index) => (
             <div
               key={index}
-              className="hover-scale relative2"
+              className="hover-scale rounded-2xl relative2"
               onClick={() => openPopup(data)}
             >
               <p
@@ -177,7 +177,7 @@ const OurWork = () => {
               >
                 {data.title}
               </p>
-              <img src={data.icon} alt="" className="w-full" />
+              <img src={data.icon} alt="" className="w-full rounded-2xl" />
               <p
                 className={`text-blue-600 lg:text-[32px] text-2xl font-bold font-nunito leading-snug text-${
                   isInViewport ? "white" : "black"
