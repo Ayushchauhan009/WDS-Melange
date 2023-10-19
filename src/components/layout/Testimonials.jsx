@@ -87,7 +87,7 @@ const Testimonials = () => {
   return (
     <div id="testimonials" className="relative">
       <div>
-        <h2 className="font-semibold font-nunito  text-2xl md:text-3xl lg:text-4xl text-center px-9 pt-12 md:px-52">
+        <h2 className="font-bold lg:font-semibold font-nunito  text-2xl md:text-3xl lg:text-5xl text-center px-9 pt-12 md:px-52">
           Our{" "}
           <span className="bg-[#D940ff] px-1 rounded-lg bg-opacity-40">
             Happy Clients

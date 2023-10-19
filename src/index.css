@@ -366,7 +366,12 @@ option{
 
 @media (max-width:768px) {
   .ind-scroll {
-    display: none;
+    display: flex;
+  }
+  .ind-scroll img {
+    width: 100%;
+    /* Adjust the width as needed */
+  
   }
 }
 @media (max-width: 768px) {
@@ -539,3 +544,109 @@ option{
     opacity: 1;
   }
 }
+
+
+
+.image-transition {
+  transition: opacity 0.5s ease-in-out;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+
+/* CSS for the popup */
+
+.parentPopup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* filter: blur(5px); */
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  
+
+}
+
+
+.popup {
+  position: fixed;
+  top: 15%;
+  overflow-y: scroll;
+  height: 450px;
+  left: 0%;
+  /* padding: 0 80px; */
+  /* transform: translate(-50%, -50%); */
+  background: white;
+  padding: 20px;
+  /* border: 2px solid #333; */
+  border-radius: 5px;
+  z-index: 100;
+  width: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* max-width: 100%; */
+}
+
+
+@media (max-width:768px){
+  .parentPopup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* filter: blur(5px); */
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    
+  
+  }
+  
+  .popup {
+    position: fixed;
+    top: 15%;
+    overflow-y: scroll;
+    height: 550px;
+    left: 0%;
+  
+    /* padding: 0 80px; */
+    /* transform: translate(-50%, -50%); */
+    background: white;
+    /* padding: 20px; */
+    /* border: 2px solid #333; */
+    border-radius: 5px;
+    z-index: 100;
+    width: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* max-width: 100%; */
+  }
+
+  .close-button img{
+    top: 150px;
+    right: 40px;
+    position: fixed;
+  }
+}
+
+
+.popup img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* CSS for the close button */
+.close-button {
+  position: fixed;
+  top: 120px;
+  z-index: 200;
+  right: 140px;
+  /* background: #333; */
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+

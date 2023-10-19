@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import emailjs from "emailjs-com";
 import Select from "react-select";
-
+import axios from "axios";
 const options = [
   { value: "Category 1", label: "Business Website" },
   { value: "Category 2", label: "E-Commerce Website" },
@@ -9,9 +9,9 @@ const options = [
   { value: "Category 4", label: "Others" },
 ];
 const options2 = [
-  { value: "Budget 1", label: "Rs. 50K - Rs. 1Lac" },
-  { value: "Budget 2", label: "Rs. 1Lac - 2Lac" },
-  { value: "Budget 3", label: "More than 2Lacs" },
+  { value: "Budget 1", label: "Rs. 50K - Rs. 1 Lac" },
+  { value: "Budget 2", label: "Rs. 1 Lac - 2 Lac" },
+  { value: "Budget 3", label: "More than 2 Lacs" },
 ];
 
 const Form = () => {
@@ -79,7 +79,8 @@ const Form = () => {
             to_email: "hello@melangedigital.in",
             from_budget: formData.budget,
           },
-          "11W3shu7B6S46t437"
+          "11W3shu7B6S46t7"
+          // "11W3shu7B6S46t437"
         )
         .then(
           () => {
@@ -108,7 +109,7 @@ const Form = () => {
         <h2 className="font-semibold text-[24px] lg:text-[32px] lg:ml-48">
           Are you ready?
         </h2>
-        <p className="text-[16px] lg:text-[20px] lg:ml-48">
+        <p className="text-[16px] whitespace-nowrap lg:text-[20px] lg:ml-48">
           Let's create the future of your business together.
         </p>
         <form

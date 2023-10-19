@@ -35,7 +35,7 @@ const Section1 = () => {
       className={`font-nunito flex flex-col lg:flex-row px-6 lg:px-28 py-10 items-center lg:space-x-10`}
     >
       <div className="font-semibold">
-        <h2 className="text-[28px] text-center lg:text-left mb-4 lg:mb-0 lg:text-[38px]">
+        <h2 className="text-[28px] font-bold lg:font-semibold text-center lg:text-left mb-4 lg:mb-0 lg:text-[38px]">
           How <br className="hidden lg:block" /> We Can{" "}
           <span className="bg-[#D940ff] rounded-lg px-1 bg-opacity-40">
             {" "}

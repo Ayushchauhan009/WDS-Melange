@@ -57,9 +57,15 @@ const Navbar = () => {
             aria-label="Toggle Menu"
           >
             {isMenuOpen ? (
-              <RiCloseLine className="hamburger-icon invert  w-10 h-8" />
+              <RiCloseLine
+                className="hamburger-icon w-10 h-8"
+                style={{ color: "white" }}
+              />
             ) : (
-              <RiMenu3Line className="hamburger-icon invert w-10 h-8" />
+              <RiMenu3Line
+                className="hamburger-icon w-10 h-8"
+                style={{ color: "white" }}
+              />
             )}
           </button>
         </div>

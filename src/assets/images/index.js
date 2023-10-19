@@ -45,6 +45,8 @@ import ind8 from "./ind8.svg";
 // import melangelogo2 from "./melange_logo2.svg";
 // import certificate1 from "./certificate1.svg";
 // import certificate2 from "./certificate2.svg";
+import closePopupButton from "./closePopup.png";
+import kunalrathod from "./kunalrathodpopup.jpg";
 import linkedin from "./linkedin.png";
 import work1 from "./work1.svg";
 import work2 from "./work2.svg";
@@ -62,8 +64,18 @@ import wd from "./wd.png";
 import seO4 from "./seoIcon.png";
 import con from "./content.png";
 import ui from "./ui.png";
+import kalon from "./kalon.jpg";
+import duvon from "./duvon.jpg";
+import dhruvak from "./dhruvak.jpg";
+import costacruises from "./costacruises.jpg";
+import proportunity from "./proportunity.jpg";
 
 export {
+  kalon,
+  duvon,
+  dhruvak,
+  costacruises,
+  proportunity,
   ui,
   wd,
   seO4,
@@ -77,7 +89,9 @@ export {
   melangeLogo2,
   // certificate1,
   // certificate2,
+  kunalrathod,
   apIcon1,
+  closePopupButton,
   apIcon2,
   apIcon3,
   apIcon4,

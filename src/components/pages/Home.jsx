@@ -40,7 +40,10 @@ const Home = () => {
           <WorkWith />
           <Industries />
           <Testimonials />
-          <Contact />
+          <div id="contactus">
+            <Contact />
+          </div>
+
           <Footer />
         </div>
       )}

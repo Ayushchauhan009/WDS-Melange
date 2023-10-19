@@ -54,7 +54,7 @@ const Approach = () => {
   return (
     <div className=" lg:px-24 lg:py-20 p-5  relative">
       <div className="">
-        <p class=" text-zinc-900 lg:text-5xl text-[28px] text-center h-auto mb-[50px]  font-semibold font-nunito leading-[48px]">
+        <p class=" text-zinc-900 font-bold lg:text-5xl text-[28px] text-center h-auto mb-[50px]  lg:font-semibold font-nunito leading-[48px]">
           Our{" "}
           <span className="bg-[#D940FF] px-2 py-1 bg-opacity-40 rounded-[10px] text-zinc-900  ">
             Approach
