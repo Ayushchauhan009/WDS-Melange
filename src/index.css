@@ -67,18 +67,6 @@ body{
 }
 
 
-@media (max-width: 768px){
-  .headerBg{
-    background-image: url("./assets/images/backgroundimageMob.svg");
-    background-size: cover;
-    
-    background-repeat: no-repeat;
-    background-position: top;
-    
-    
-  }
-}
-
 
 .navbar-link {
   display: inline-block;
