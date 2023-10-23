@@ -4,7 +4,7 @@ import { triBlue, triPurple } from "../../assets/decor";
 
 const ChooseUS = () => {
   return (
-    <div className="lg:px-48 lg:py-20 py-10 px-5 font-nunito relative">
+    <div className="lg:px-48 bg-[#f8f8f8] lg:py-20 py-10 px-5 font-nunito relative">
       <div className="">
         <p class=" text-zinc-900 lg:text-5xl text-[28px] text-center h-auto lg:mb-[50px] mb-[10px]  font-bold lg:font-semibold font-nunito leading-[48px]">
           Why{" "}

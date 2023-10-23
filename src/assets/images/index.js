@@ -72,8 +72,10 @@ import proportunity from "./proportunity.jpg";
 import uparrow from "./up-arrow.png";
 import costaLogo from "./costaLogo.png";
 import kunalRathod from "./kunalrathodLogosvg.svg";
+import computer from "./computer.svg";
 
 export {
+  computer,
   costaLogo,
   kunalRathod,
   uparrow,

@@ -9,7 +9,7 @@ import { wave } from "../../assets/decor";
 
 const WorkWith = () => {
   return (
-    <div className="work-with lg:px-20 lg:py-20 px-5 py-10 relative ">
+    <div className="work-with bg-[#f8f8f8] lg:px-20 lg:py-20 px-5 py-10 relative ">
       <div className="flex flex-col lg:flex-row justify-center items-center">
         <div className="lg:w-[40%]">
           <div class=" text-zinc-900 text-center lg:text-left lg:text-5xl text-[28px] font-semibold font-nunito lg:leading-[57.60px] mb-2 leading-[33.60px]">

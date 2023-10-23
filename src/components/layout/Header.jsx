@@ -1,5 +1,9 @@
 import React, { useRef, useLayoutEffect, useState } from "react";
 import gsap from "gsap";
+import { computer } from "../../assets/images";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 const Header = () => {
   const headingRef = useRef(null);
@@ -8,12 +12,17 @@ const Header = () => {
   const [animationPlayed, setAnimationPlayed] = useState(false);
 
   const scrollToContactUs = () => {
-    const contactUsSection = document.getElementById("contactus");
+    const contactUsSection = document.querySelector(".contactus");
     if (contactUsSection) {
-      contactUsSection.scrollIntoView({ behavior: "smooth" });
+      gsap.to(window, {
+        duration: 0.5,
+        scrollTo: contactUsSection,
+        onComplete: () => {
+          setAnimationPlayed(true);
+        },
+      });
     }
   };
-
   useLayoutEffect(() => {
     if (!animationPlayed) {
       const animation = gsap.fromTo(
@@ -85,7 +94,7 @@ const Header = () => {
   return (
     <div
       ref={headerRef}
-      className="h-[500px]  lg:h-auto px-2 pb-[27.9rem] lg:pb-[42rem] xxll:pb-[52rem] 2xl:pb-[45rem] flex flex-col pt-40 items-center headerBg"
+      className=" px-2  flex flex-col pt-40 items-center headerBg"
     >
       <h1
         ref={headingRef}
@@ -95,7 +104,7 @@ const Header = () => {
         Transform Your Online Presence
       </h1>
       <button
-        type="submit"
+        type="button"
         ref={buttonRef}
         onClick={() => {
           scrollToContactUs();
@@ -105,6 +114,7 @@ const Header = () => {
       >
         Get Started
       </button>
+      <img src={computer} alt="computer-image" className="pt-10" />
     </div>
   );
 };

@@ -87,7 +87,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div id="testimonials" className="relative">
+    <div id="testimonials" className="bg-[#f8f8f8] relative">
       <div>
         <h2 className="font-bold lg:font-semibold font-nunito  text-2xl md:text-3xl lg:text-5xl text-center px-9 pt-12 md:px-52">
           Our{" "}
@@ -150,7 +150,7 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
-        <div className="pagination flex justify-center items-center my-4 lg:my-8">
+        <div className="pagination flex justify-center items-center py-4 lg:py-8">
           {Array.from({ length: totalPages }, (_, index) => (
             <button
               key={index + 1}

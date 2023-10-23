@@ -16,6 +16,9 @@ import {
   BackToTop,
   PreLoader,
 } from "../layout";
+
+import { StarsCanvas } from "../canvas";
+
 const Home = () => {
   const [loading, setLoading] = useState(true);
 
@@ -33,7 +36,10 @@ const Home = () => {
         <div className="content">
           <AnimatedCursor />
           <Navbar />
-          <Header />
+          <div className="relative z-0">
+            <Header />
+            <StarsCanvas />
+          </div>
           <Section1 />
           <Approach />
           <OurWork />
@@ -42,7 +48,7 @@ const Home = () => {
           <Industries />
           <BackToTop />
           <Testimonials />
-          <div id="contactus">
+          <div className="contactus">
             <Contact />
           </div>
 

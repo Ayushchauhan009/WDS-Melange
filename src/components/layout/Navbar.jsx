@@ -1,11 +1,21 @@
 import React, { useState, useEffect, useRef } from "react";
 import { mainLogo } from "../../assets/images";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 
-const scrollToContactUs = () => {
-  const contactUsSection = document.getElementById("contactus");
+gsap.registerPlugin(ScrollToPlugin);
+
+const scrollToContactUsByNav = () => {
+  const contactUsSection = document.querySelector(".contactus");
   if (contactUsSection) {
-    contactUsSection.scrollIntoView({ behavior: "smooth" });
+    gsap.to(window, {
+      duration: 0.5,
+      scrollTo: contactUsSection,
+      onComplete: () => {
+        setAnimationPlayed(true);
+      },
+    });
   }
 };
 
@@ -82,7 +92,7 @@ const Navbar = () => {
         >
           <div className="navbar-contact shadow-lg rounded-2xl cursor-pointer bg-[#1A1A1A] font-medium text-[17px] text-[#fff] hidden sm:block">
             <div>
-              <button type="submit" onClick={scrollToContactUs}>
+              <button type="button" onClick={scrollToContactUsByNav}>
                 Contact Us
               </button>
             </div>
@@ -99,7 +109,7 @@ const Navbar = () => {
                 className="nav-link text-[25px] "
                 onClick={closeMenu}
               >
-                <button type="submit" onClick={scrollToContactUs}>
+                <button type="button" onClick={scrollToContactUsByNav}>
                   Contact Us
                 </button>
               </div>

@@ -20,6 +20,11 @@ const Form = () => {
   const [phone, setPhone] = useState("");
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [budget, setBudget] = useState("");
+  const [selectedValue, setSelectedValue] = useState("static");
+
+  const handleValueChange = (value) => {
+    setSelectedValue(value);
+  };
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -144,6 +149,32 @@ const Form = () => {
             placeholder="Company email id*"
             className="bg-[#fff] my-2 p-2 w-full placeholder-black outline-none"
           />
+          <div className="swipeable-radio">
+            <label
+              className={selectedValue === "static" ? "active" : "bg-white"}
+            >
+              <input
+                type="radio"
+                name="radio-option"
+                value="static"
+                checked={selectedValue === "static"}
+                onChange={() => handleValueChange("static")}
+              />
+              Static
+            </label>
+            <label
+              className={selectedValue === "dynamic" ? "active" : "bg-white"}
+            >
+              <input
+                type="radio"
+                name="radio-option"
+                value="dynamic"
+                checked={selectedValue === "dynamic"}
+                onChange={() => handleValueChange("dynamic")}
+              />
+              Dynamic
+            </label>
+          </div>
           <Select
             options={options}
             isMulti
@@ -152,6 +183,7 @@ const Form = () => {
             placeholder="Type of website*"
             className="mt-2 mb-4 placeholder-black"
           />
+
           <Select
             options={options2}
             value={budget}

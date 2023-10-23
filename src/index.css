@@ -12,7 +12,7 @@ html{
 
 
 body{
-  background-color: #f8f8f8;
+  background-color: #050917;
 }
 
 
@@ -32,12 +32,16 @@ body{
   }
 }
 
-
+/* 
 .headerBg{
   background-image: url("../src/assets/images/backgroundimage.svg");
   background-size: cover;
   background-position: center;
-}
+} */
+
+
+
+
 
 .submitBtn{
   background: linear-gradient(to right, rgba(56, 88, 255, 1), rgba(183, 69, 255, 1), rgba(217, 64, 255, 1));
@@ -671,3 +675,37 @@ option{
   background-color: #0056b3; /* Hover background color */
   transform: scale(1.1); /* Add a scale effect on hover */
 }
+
+
+.swipeable-radio {
+  display: flex;
+  border-radius: 25%;
+  border: none;
+  appearance: none;
+  justify-content: space-between;
+}
+
+.swipeable-radio input{
+display: none;
+
+}
+
+label {
+  flex: 1;
+  
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none; /* Remove the border */
+  background: none; /* Remove the background color */
+  
+  margin: 10px 0; /* Remove margin */
+}
+
+label.active {
+  background-color: #007bff;
+  color: #fff;
+  transform-origin: left;
+  transition: all 0.5s ease;
+  }

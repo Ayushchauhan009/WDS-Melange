@@ -50,7 +50,7 @@ const Industries = () => {
   }, []);
 
   return (
-    <div className="lg:pt-20 px-5 py-10">
+    <div className="lg:pt-20 px-5 bg-[#f8f8f8] py-10">
       <div className="">
         <p className="text-zinc-900 lg:text-5xl text-[28px] text-center h-auto lg:mb-[50px] mb-[30px] font-bold lg:font-semibold font-nunito leading-[48px]">
           Industries{" "}
