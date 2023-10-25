@@ -73,8 +73,44 @@ import uparrow from "./up-arrow.png";
 import costaLogo from "./costaLogo.png";
 import kunalRathod from "./kunalrathodLogosvg.svg";
 import computer from "./computer.svg";
+import dhruvak1 from "./dhruvakImage1.svg";
+import dhruvak2 from "./dhruvakImage2.svg";
+import dhruvak3 from "./dhruvakImage3.svg";
+import kalon1 from "./kalon1.svg";
+import kalon2 from "./kalon2.svg";
+import kalon3 from "./kalon3.svg";
+import duvon1 from "./Duvon1.svg";
+import duvon2 from "./duvon2.svg";
+import duvon3 from "./duvon3.svg";
+import prop1 from "./prop1.svg";
+import prop2 from "./prop2.svg";
+import prop3 from "./prop3.svg";
+import kunal1 from "./kunal1.svg";
+import kunal2 from "./kunal2.svg";
+import kunal3 from "./kunal3.svg";
+import costa1 from "./costa1.svg";
+import costa2 from "./costa2.svg";
+import costa3 from "./costa3.svg";
 
 export {
+  costa1,
+  costa2,
+  costa3,
+  kunal1,
+  kunal2,
+  kunal3,
+  prop1,
+  prop2,
+  prop3,
+  kalon1,
+  kalon2,
+  kalon3,
+  duvon1,
+  duvon2,
+  duvon3,
+  dhruvak1,
+  dhruvak2,
+  dhruvak3,
   computer,
   costaLogo,
   kunalRathod,
